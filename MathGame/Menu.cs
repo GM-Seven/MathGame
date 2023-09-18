@@ -6,7 +6,10 @@
 
         internal void ShowMenu(string? name)
         {
+            Console.Clear();
             Console.WriteLine($"Hello {name}! Today is {DateTime.UtcNow.DayOfWeek}.");
+            Console.WriteLine("Press any key to show menu.");
+            Console.ReadLine();
 
             bool isGameOn = true;
 

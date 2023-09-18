@@ -17,7 +17,7 @@
                 number1 = random.Next(1, 9);
                 number2 = random.Next(1, 9);
                 Console.WriteLine($"{number1} + {number2}");
-                var answer = Console.ReadLine();
+                var answer = Helpers.ValidateAnswer();
                 var result = number1 + number2;
 
                 if (int.Parse(answer) == result)
@@ -35,7 +35,7 @@
                 Console.ReadLine();
             }
 
-            Helpers.GameEnd(score, "Addition");
+            Helpers.GameEnd(score, Models.GameType.Addition);
         }
         internal void SubtractionGame()
         {
@@ -52,7 +52,7 @@
                 number1 = random.Next(1, 9);
                 number2 = random.Next(1, 9);
                 Console.WriteLine($"{number1} - {number2}");
-                var answer = Console.ReadLine();
+                var answer = Helpers.ValidateAnswer();
                 var result = number1 - number2;
 
                 if (int.Parse(answer) == result)
@@ -70,7 +70,7 @@
                 Console.ReadLine();
             }
 
-            Helpers.GameEnd(score, "Subtraction");
+            Helpers.GameEnd(score, Models.GameType.Subtraction);
         }
         internal void MultiplicationGame()
         {
@@ -87,7 +87,7 @@
                 number1 = random.Next(1, 9);
                 number2 = random.Next(1, 9);
                 Console.WriteLine($"{number1} * {number2}");
-                var answer = Console.ReadLine();
+                var answer = Helpers.ValidateAnswer();
                 var result = number1 * number2;
 
                 if (int.Parse(answer) == result)
@@ -105,7 +105,7 @@
                 Console.ReadLine();
             }
 
-            Helpers.GameEnd(score, "Multiplication");
+            Helpers.GameEnd(score, Models.GameType.Multiplication);
         }
         internal void DivisionGame()
         {
@@ -124,7 +124,7 @@
                 result = random.Next(1, 10);
                 number1 = number2 * result;
                 Console.WriteLine($"{number1} / {number2}");
-                var answer = Console.ReadLine();
+                var answer = Helpers.ValidateAnswer();
 
                 if (int.Parse(answer) == result)
                 {
@@ -141,7 +141,7 @@
                 Console.ReadLine();
             }
 
-            Helpers.GameEnd(score, "Division");
+            Helpers.GameEnd(score, Models.GameType.Division);
         }
     }
 }
